@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var diarias = Number(prompt("quantidade diaria"))
+        var precototal = 0
+
+        if (diarias <= 5) {
+            var precototal = (diarias * 100)
+        } else if (diarias >= 6 && diarias <= 10) {
+            var precototal = (diarias * 90)
+        } else {
+            var precototal = (diarias * 80)
+        }
+
+        precototal *= 0.9 //atribui a multiplicação direto ao valor
+        precototal += 150 // atribui a soma direto ao valor
+
+        alert(precototal)
+
+        
+
+    </script>
+</body>
+</html>

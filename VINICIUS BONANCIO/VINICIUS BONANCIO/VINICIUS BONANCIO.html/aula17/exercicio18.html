@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ope = Number(prompt("Escolha o operador desejado:\n1: +\n2: -\n3: /\n4: *"))
+        var numUm = Number(prompt("digite o primeiro numero"))
+        var numDois = Number(prompt("digite o segundo numero"))
+        if (numDois == 0 && ope == 3) {
+            alert("Não é possivel dividir um numero por 0")
+        }
+        else {
+
+            switch (ope) {
+                case 1:
+                    var total = Number(numUm + numDois)
+                    alert("O resultado é de: " + total)
+                    break
+                case 2:
+                    var total = Number(numUm - numDois)
+                    alert("O resultado é de: " + total)
+                    break
+                case 3:
+                    var total = Number(numUm / numDois)
+                    alert("O resultado é de: " + total)
+                    break
+                case 4:
+                    var total = Number(numUm * numDois)
+                    alert("O resultado é de: " + total)
+                    break
+                default: prompt("Este valor ou opçao nao é válida")
+            }
+        }
+    </script>
+</body>
+</html>
