@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Temperatura C°<input type="text" id="celcius">
+    <button onclick="calcular()">CALCULAR</button>
+    <h1 id="saida"></h1>
+
+    <script>
+        function calcular() {
+            // var C = Number(prompt("INFORME A TEMPERATURA EM °C"))
+            var C = Number(document.getElementById("celcius").value) //ENTRADA
+            var F = C * 1.8 + 32
+            var K = C + 273.15
+
+            // alert("KELVIN: " + K + "\n" + "FAHRENHEIT: " +F)
+
+            // document.write("KELVIN: " + K + "<br>" + "FAHRENHEIT: " +F)
+
+            document.getElementById("saida").innerText = "KELVIN: " + K + "\n" + "FAHRENHEIT: " + F
+
+        }
+
+    </script>
+</body>
+
+</html>

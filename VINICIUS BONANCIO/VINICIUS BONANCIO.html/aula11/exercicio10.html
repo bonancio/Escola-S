@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nota1 = Number(prompt("Digite sua priemira nota"))
+        var nota2 = Number(prompt("Digite sua segunda nota"))
+        var nota3 = Number(prompt("Digite sua terceira nota"))
+
+        var media = Number((nota1 + nota2 + nota3) / 3)
+
+        switch (true) {
+            case media <= 2:
+                alert("conceito E - Nos vemos ano que vem")
+                break;
+            case media <= 4:
+                alert("conceito D - Regular")
+                break;
+            case media <= 6:
+                alert("conceito  C - Bom")
+                break;
+            case media <= 8:
+                alert("conceito B - Ótimo")
+                break;
+            default:
+                alert("conceito A - Exelente")
+                break;
+        }
+    
+    </script>
+</body>
+</html>

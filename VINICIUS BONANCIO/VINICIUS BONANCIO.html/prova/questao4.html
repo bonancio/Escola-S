@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var salario = Number(prompt("Qual seu salario bruto"))
+
+    
+        if (salario <= 1.100) {
+            var desconto = salario *0.075
+            var total = salario - desconto
+            alert("o seu salario liquido sera "+ total)
+        } else if (salario > 1.100 && salario <= 2.203,45) {
+            var desconto = salario *0.09
+            var total = salario - desconto
+            alert("o seu salario liquido sera "+ total)
+        } else if (salario > 2.203,45 && salario <= 3.305,22) {
+            var desconto = salario *0.12
+            var total = salario - desconto
+            alert("o seu salario liquido sera "+ total)
+        } else if (salario > 3.305,22) {
+            var desconto = salario *0.14
+            var total = salario - desconto
+            alert("o seu salario liquido sera "+ total)
+        } 
+    </script>
+</body>
+</html>

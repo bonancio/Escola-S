@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var idade = Number(prompt("qual sua idade"))
+
+        if (idade < 16) {
+            alert("voce nao pode votar")
+        } else if (idade == 16 || idade == 17) {
+            alert("voto facultativo")
+        } else if (idade >= 18 && idade <= 65) {
+            alert("voto obrigatorio")
+        } else {
+            alert("voto facultativo")
+        }
+    </script>
+</body>
+</html>

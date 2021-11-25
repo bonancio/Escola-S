@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ptr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valProduto = prompt("Qual o valor do produto que deseja comprar?")
+        var moeda1 = Number(prompt("Quantas moedas de 1 real vc tem?"))
+        var moeda05 = Number(prompt("Quantas moedas de 50 centavos vc tem?"))
+        var moeda025 = Number(prompt("Quantas moedas de 25 centavos vc tem?"))      //ENTRADA
+        var moeda010 = Number(prompt("Quantas moedas de 10 centavos vc tem?"))
+        var moeda005 = Number(prompt("Quantas moedas de 5 centavos vc tem?"))
+
+        var valTotal = 1 * moeda1 + 0.5 * moeda05 + 0.25 * moeda025 + 0.10 * moeda010 + 0.05 * moeda005     //PROCESSAMENTO
+
+        if (valTotal > valProduto) {
+            alert("Voce tem o dinheiro necessario para a compra")
+        } else {                                                                    //SAIDA
+            alert("Voce nao tem o dinheiro necessario para a compra")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/calculadora.css">
+    <link rel="stylesheet" href="CSS/equacaoDoisPontos.css">
+</head>
+<body>
+    <nav>
+        <a  href="classica.html">Clássica</a>
+        <a  href="EquacaoDoisPontos.html">Equação dois pontos</a>
+        <a  href="DistanciaEntrePontoReta.html">Distancia entre Ponto e Reta</a>
+        <a  href="equacaoReduzida.html">Equação Reduzida</a>
+        <a  href="posicaoRelativaDasRetas.html" class="selecionada">Posiçao relativa das retas</a>
+    </nav>
+
+    <div class="calculadora">
+        <input type="text" disabled class="display" id="display">    
+            <div class="pontos">
+                <label>1° Reta</label>
+                <div><span>M: </span><input type="number" class="ponto" id="xA"></div>
+                <div><span>N: </span><input type="number" class="ponto" id="yA"></div>
+            </div>
+            <div class="pontos">
+                <label>2° Reta</label>
+                <div><span>M: </span><input type="number" class="ponto" id="xB"></div>
+                <div><span>N: </span><input type="number" class="ponto" id="yB"></div>
+            </div> 
+            
+            <div class="primeira-linha">
+                <button onclick="limpar()">LIMPAR</button>
+            </div>
+            <div class="primeira-linha">
+                <button onclick="posicaoRelativaDuasRetas()">POSICAO RELATIVA DAS RETAS</button>
+            </div>
+
+            
+
+    </div>
+
+    <script src="JS/posicaoRelativadasRetas.js"></script>
+
+</body>
+</html>
