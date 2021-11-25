@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/menu.css">
     <link rel="stylesheet" href="CSS/calculadora.css">
+    <link rel="stylesheet" href="CSS/equacaoDoisPontos.css">
 </head>
 <body>
     <nav>
@@ -17,6 +18,28 @@
         <a  href="posicaoRelativaDasRetas.html">Posiçao relativa das retas</a>
     </nav>
 
-    <h1>Equação Reduzida</h1>
+    <div class="calculadora">
+        <input type="text" disabled class="display" id="display">    
+            <div class="pontos">
+                <label>Ponto A</label>
+                <div><span>X: </span><input type="number" class="ponto" id="xA"></div>
+                <div><span>Y: </span><input type="number" class="ponto" id="yA"></div>
+            </div>
+            <div class="coeficiente">
+                <label>Coef Angular</label>
+                <div><span>X: </span><input type="number" class="ponto" id="M"></div>
+            </div> 
+            
+            <div class="primeira-linha">
+                <button onclick="limpar()">LIMPAR</button>
+            </div>
+            <div class="primeira-linha">
+                <button onclick="equacaoReduzida()">EQUACAO REDUZIDA</button>
+            </div>
+
+            
+
+    </div>
+
 </body>
 </html>

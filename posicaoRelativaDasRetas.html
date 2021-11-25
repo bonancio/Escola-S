@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/menu.css">
     <link rel="stylesheet" href="CSS/calculadora.css">
+    <link rel="stylesheet" href="CSS/equacaoDoisPontos.css">
 </head>
 <body>
     <nav>
@@ -17,6 +18,31 @@
         <a  href="posicaoRelativaDasRetas.html" class="selecionada">Posiçao relativa das retas</a>
     </nav>
 
-    <h1>Posiçao relativa das retas</h1>
+    <div class="calculadora">
+        <input type="text" disabled class="display" id="display">    
+            <div class="pontos">
+                <label>1° Reta</label>
+                <div><span>M: </span><input type="number" class="ponto" id="xA"></div>
+                <div><span>N: </span><input type="number" class="ponto" id="yA"></div>
+            </div>
+            <div class="pontos">
+                <label>2° Reta</label>
+                <div><span>M: </span><input type="number" class="ponto" id="xB"></div>
+                <div><span>N: </span><input type="number" class="ponto" id="yB"></div>
+            </div> 
+            
+            <div class="primeira-linha">
+                <button onclick="limpar()">LIMPAR</button>
+            </div>
+            <div class="primeira-linha">
+                <button onclick="posicaoRelativaDuasRetas()">POSICAO RELATIVA DAS RETAS</button>
+            </div>
+
+            
+
+    </div>
+
+    <script src="JS/posicaoRelativadasRetas.js"></script>
+
 </body>
 </html>

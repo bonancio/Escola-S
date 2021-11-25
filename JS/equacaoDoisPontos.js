@@ -33,45 +33,38 @@ function calcDst() {
     
  }
 
- function calcCoef() {
-    var xA = Number(document.getElementById("xA").value);
-    var xB = Number(document.getElementById("xB").value);
-    var yA = Number(document.getElementById("yA").value);
-    var yB = Number(document.getElementById("yB").value); 
-   
-    var CA = (yA - yB) / (xA - xB)
-
-    document.getElementById("display").value = `CA = ${CA.toFixed(4)}`;
-
- }
-
  function calcEquaReta() {
-   var xA = Number(document.getElementById("xA").value);
-   var xB = Number(document.getElementById("xB").value);
-   var yA = Number(document.getElementById("yA").value);
-   var yB = Number(document.getElementById("yB").value); 
+   var pAx = Number(document.getElementById("xA").value);
+   var pAy = Number(document.getElementById("yA").value);
+   var pBx = Number(document.getElementById("xB").value);
+   var pBy = Number(document.getElementById("yB").value);
 
-   var mat = [
-      [xA,xB,1,xA],
-      [yA,yB,1,yA]
+   var m = [
+       [pAx, pBx, 1, pAx],
+       [pAy, pBy, 1, pAy]
    ]
 
-   var n1 = ((-1 * mat[0][1]) * mat [1][0])
-   var x1 = ((-1 * mat [0][2]) * mat [1][1])
-   var y1 = ((-1 * mat [0][3]) * mat [1][2])
+   var n1 = ((-1 * m[0][1]) * m[1][0])
+   var x1 = ((-1 * m[0][2]) * m[1][1])
+   var y1 = ((-1 * m[0][3]) * m[1][2])
 
-   var n2 = mat[0][0] * mat[1][1]
-   var x2 = mat[0][1] * mat[1][2]
-   var y2 = mat[0][2] * mat[1][3]  
-   
-   var somaX = x1 + x2;
-   var somaY = y1 + y2;
-   var somaN = n1 + n2;
+   var n2 = m[0][0] * m[1][1]
+   var y2 = m[0][1] * m[1][2]
+   var x2 = m[0][2] * m[1][3]
 
-   somaX = (somaX > 0 ? `+${somaX}`: somaX);
-   somaY = (somaY > 0 ? `+${somaY}`: somaY);
-   somaN = (somaN > 0 ? `+${somaN}`: somaN);
+   var somaX = x1 + x2 > 0 ? `+${x1 + x2}` : `${x1 + x2}`;
+   var somaY = y1 + y2 > 0 ? `+${y1 + y2}` : `${y1 + y2}`;
+   var somaN = n1 + n2 > 0 ? `+${n1 + n2}` : `${n1 + n2}`;
 
-   document.getElementById("display").value = `${somaX}X ${somaY}Y ${somaN} = 0`;
+   document.getElementById("display").value = `Equação da Reta: ${somaX}x ${somaY}y ${somaN} = 0 `;
 
- }
+}
+
+function calcCoef() {
+   var pAx = Number(document.getElementById("xA").value);
+   var pAy = Number(document.getElementById("yA").value);
+   var pBx = Number(document.getElementById("xB").value);
+   var pBy = Number(document.getElementById("yB").value);
+   var coefienteAngular = (pAy - pBy) / (pAx - pBx);
+   document.getElementById("display").value = `Coefiente Angular ${coefienteAngular}`;
+}
